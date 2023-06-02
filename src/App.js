@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, useEffect, useState }from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
+import ShowList from './components/ShowList';
+import ShowDetails from './components/ShowDetails';
+import ShowBookings from './components/showBooking'
 
-function App() {
+const App = () => {
+  const [shows, setShows] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.tvmaze.com/search/shows?q=all')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setShows(data)});
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='pages'>
+        <nav className='Home'>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Routes> {/* Wrap routes with <Routes> */}
+          <Route path="/" element={<ShowList />} /> 
+          {shows.map(show => (
+            < >
+              {console.log(show)}
+              <Route key={show.show.id} path={`/show/${show.show.id}`} element={<ShowDetails show={show.show} id={show.show.id}/>} />
+            </>
+          ))}
+            <Route path="/booking/" element={<ShowBookings />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

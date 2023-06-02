@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.pages{
+}
+.Item {
+  padding: 20px;
+  background-color: rgb(218, 237, 238);
+}
+.Details {
+  padding: 20px;
+  align-content: center;
+  justify-content: center;
+  background-color:rgb(190, 213, 233)
+}
+
+.Home{
+  padding: 5px;
+  background-color: rgb(205, 230, 222);
+  fill: 100%;
+}
+
+.Item-title {
+  color:rgb(30, 27, 27)
+}
+
+.Item-summery{
+  color: rgb(71, 98, 122);
+}
+
+.Item-btn{
+  background-color: rgb(101, 97, 227);
+  color: aliceblue;
+}
+
+.show-details {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+.show-details h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.show-details p {
+  margin-bottom: 10px;
+}
+
+.show-details .summary {
+  font-style: italic;
+}
+
+.show-details .details-label {
+  font-weight: bold;
+}
+
+.show-details .button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.show-details .button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.show-details .button-container button:hover {
+  background-color: #0056b3;
+}
+
+
+
+.booking-form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+.booking-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.booking-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: #0056b3;
+}
+
